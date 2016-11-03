@@ -1,25 +1,28 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
+#include "Constans.h"
+
 class Snake {
+public:
 private:
-	int headDir;
-	int tailDir;
+	Dir headDir;
+	Dir tailDir;
 	int headX, headY;
 	int tailX, tailY;
 	
 public:
 	Snake();
 
-	int getHeadDir();
+	Dir getHeadDir();
 	int getHeadX();
 	int getHeadY();
 	int getTailX();
 	int getTailY();
-	int getTailDir();
+	Dir getTailDir();
 
-	void setHeadDir(int);
-	void setTailDir(int);
+	void setHeadDir(Dir);
+	void setTailDir(Dir);
 	void setHeadX(int);
 	void setHeadY(int);
 	void setTailX(int);

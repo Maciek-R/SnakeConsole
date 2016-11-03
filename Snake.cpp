@@ -1,17 +1,17 @@
 #include "Snake.h"
 
 Snake::Snake() {
-	headDir = 2;
+	headDir = Dir::RIGHT;
 	headX = 35;
 	headY = 22;
 	tailX = 31;
 	tailY = 22;
 }
 
-void Snake::setHeadDir(int dir) {
+void Snake::setHeadDir(Dir dir) {
 	headDir = dir;
 }
-void Snake::setTailDir(int dir) {
+void Snake::setTailDir(Dir dir) {
 	tailDir = dir;
 }
 void Snake::setHeadX(int x) {
@@ -54,7 +54,7 @@ void Snake::decTailY() {
 }
 
 
-int Snake::getHeadDir() {
+Dir Snake::getHeadDir() {
 	return headDir;
 }
 int Snake::getHeadX() {
@@ -69,6 +69,6 @@ int Snake::getTailX() {
 int Snake::getTailY() {
 	return tailY;
 }
-int Snake::getTailDir() {
+Dir Snake::getTailDir() {
 	return tailDir;
 }

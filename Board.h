@@ -3,22 +3,25 @@
 
 #include <windows.h>
 #include <iostream>
-#include "Snake.h"
 #include <conio.h>
+#include "Snake.h"
+#include "Constans.h"
 
 using namespace std;
 
 class Board {
 
 private:
-	HANDLE qwerty;
 
-	int Tablica[80][25];
+	HANDLE handle;
+	Dir Tab[80][25];
 	Snake snake;
-	int jabx, jaby;
 
-	void jablko(int & jabx, int & jaby, int Tablica[80][25]);
-	void gotoxy(int x, int y);
+	bool gameOver;
+	bool eatenApple;
+	int points;
+
+	void newApple(int &, int &);
 public:
 	Board();
 	void writeTitle();
@@ -32,10 +35,8 @@ public:
 	void hideMenu();
 
 	void snakeInput(char input);
-
-	bool zjadl;
-	bool koniec;
-	int licznik;
+	bool isGameOver();	
+	void gotoxy(int x, int y);
 };
 
 
